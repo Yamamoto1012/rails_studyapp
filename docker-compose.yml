@@ -11,6 +11,9 @@ services:
     # 環境変数の指定（初期設定値）
     environment:
       MYSQL_ROOT_PASSWORD: password
+    
+    ports:
+    - "3306:3306"
   web:
     # コンテナ名の指定
     container_name: rails_study1

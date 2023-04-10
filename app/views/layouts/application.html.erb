@@ -15,16 +15,23 @@
 
   <body>
     <header>
-    <li>
-      <%= link_to 'ホーム', root_path %>
-    </li>
-    <li>
-      <%= link_to 'とうろく', new_user_registration_path %>
-      <%= link_to 'ログイン', new_user_session_path%> 
-    </li>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
+    <ul>
+      <li>
+        <%= link_to 'ホーム', root_path %>
+      </li>
+      <li>
+        <%= link_to 'とうろく', new_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to 'ログイン', new_user_session_path%> 
+      </li>
+      <li>
+        <%= link_to '投稿一覧', posts_path %>
+      </li>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+    </ul>
     </header>
+    <%= yield %>
   </body>
 </html>
