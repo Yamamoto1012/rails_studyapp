@@ -1,7 +1,9 @@
-<h1>投稿一覧</h1>
-<p>はろはろ</p>
-<% @posts.each do |post| %>
-    <div>
-        <p><%= link_to(post.content, post) %></p>
-    </div>
-<% end %>
+<p>投稿一覧</p>
+<div class="max-w-screen-sm border-solid border-2 border-black ">
+    <% @posts.each do |post| %>
+        <div>
+            <div><%= link_to(post.content, post) %></div>
+            <div><%= link_to(post.content, post) %></div>
+        </div>
+    <% end %>
+</div>
