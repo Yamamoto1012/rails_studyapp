@@ -15,10 +15,20 @@ class PostsController < ApplicationController
     @post = Post.new(content: params[:content], user: current_user)
 
     if @post.save
-      redirect_to("/posts")
+      redirect_to posts_url
     else
       flash[:alert] = 'Error'
       redirect_to root_url
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+      if @post.destroy
+        redirect_to posts_url
+      else
+        flash[:alert] = 'Error'
+        redirect_to root_url
+      end
   end
 end

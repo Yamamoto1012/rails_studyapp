@@ -1,4 +1,5 @@
-<p>投稿一覧</p>
+<%= link_to "新規投稿", new_path %>
+<%= link_to "投稿一覧", posts_path%>
 <div class="max-w-screen-sm border-solid border-2 border-black ">
     <% @posts.each do |post| %>
         <div>
