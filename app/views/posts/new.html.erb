@@ -1,0 +1,5 @@
+<%= form_tag("/posts/create") do %>
+  <%= label_tag(:content, "Content") %>
+  <%= text_field_tag(:content) %>
+  <%= submit_tag("投稿") %>
+<% end %>
